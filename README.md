@@ -34,7 +34,29 @@ Python · SQLite · sqlglot · LangGraph · Gemini · Streamlit · pytest · Git
 
 ## Getting started
 
-*Setup instructions will be added once the first runnable version lands.*
+Requires Python 3.11+.
+
+```bash
+git clone https://github.com/Hansha111/tax-copilot.git
+cd tax-copilot
+python -m venv .venv
+# Windows: .venv\Scripts\activate    macOS/Linux: source .venv/bin/activate
+pip install -e ".[dev]"
+pytest
+```
+
+Copy `.env.example` to `.env` and add a Gemini API key only when you want to run the live agent. The tests run without one.
+
+## Project status
+
+| Piece | Status |
+|---|---|
+| Project scaffold, config, tests | ✅ |
+| Fake GSTIN generator + checksum validator (`gstcopilot.datagen.gstin`) | ✅ |
+| Database schema, synthetic data + injected mismatches | ⏳ next |
+| Deterministic matcher | ⏳ |
+| SQL guard + agent | ⏳ |
+| Streamlit UI | ⏳ |
 
 ## Roadmap
 
@@ -45,4 +67,4 @@ Python · SQLite · sqlglot · LangGraph · Gemini · Streamlit · pytest · Git
 
 ## License
 
-To be added.
+[MIT](LICENSE). See also the [disclaimer](DISCLAIMER.md).

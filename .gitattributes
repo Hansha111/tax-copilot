@@ -1,0 +1,4 @@
+# Normalise line endings in the repo; keep LF for files that tools read on any OS.
+* text=auto
+Makefile text eol=lf
+*.sh text eol=lf

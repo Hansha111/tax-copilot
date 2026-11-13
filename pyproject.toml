@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gstcopilot"
+version = "0.0.1"
+description = "GST compliance copilot: deterministic GSTR-2B reconciliation + a read-only SQL agent. Synthetic data only."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.11"
+dependencies = [
+    "faker>=25",
+    "sqlglot>=25",
+    "langgraph>=0.2",
+    "langchain-google-genai>=2",
+    "pydantic>=2.6",
+    "streamlit>=1.35",
+    "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
