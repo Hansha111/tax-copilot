@@ -1,0 +1,41 @@
+# ---- Planning docs & notes (kept local, not pushed) ----
+# Ignore every Markdown file at the repo root except the public ones
+/*.md
+!/README.md
+!/DISCLAIMER.md
+docs/
+
+# ---- AI assistant / tooling folders ----
+.claude/
+graphify-out/
+
+# ---- Secrets ----
+.env
+.env.*
+!.env.example
+
+# ---- Generated data (synthetic DB, exports) ----
+data/
+*.db
+*.sqlite
+*.sqlite3
+
+# ---- Python ----
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# ---- Editors / OS ----
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
